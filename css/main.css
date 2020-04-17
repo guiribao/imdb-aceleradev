@@ -1,0 +1,347 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	font-size: 10px;
+	background-color: white;
+}
+
+.container {
+	width: 960px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.header {
+	width: 100%;
+	height: 90vh;
+	background-image: url('../img/capa-madmax2.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;	
+	flex-direction: column;
+	justify-content:space-between;
+	align-items: center;
+	padding: 20px;
+	
+	position: relative;
+}
+.header::after {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg,rgba(0, 0, 0, 0.6) 0%,rgba(0, 212, 255, 0) 75%);
+	content: "";
+	position: absolute;
+	top: 0;	
+	left: 0;
+}
+
+.header__navbar {
+	display: flex;
+	z-index: 2;
+}
+	.header__navbar .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.header__navbar--logo {
+		display: inline-block;
+	}
+	.header__navbar--menu {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+		.header__navbar--menu li {
+			display: inline;
+			margin: 0 25px;
+		}
+			.catalog__navbar--menu li a,
+			.header__navbar--menu li a {
+				font-size: 1.3em;
+				font-weight: bold;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: white;
+				transition: all 0.2s ease-in-out;
+			}
+			.header__navbar--menu li a:hover {
+				color: #e4bb23;
+			}
+
+	.header__navbar--user {
+		font-size: 1.3em;
+		font-weight: bold;
+		color: white;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+		.header__navbar--user-photo {
+			width: 45px;
+			height: 45px;
+			display: flex;
+			border-radius: 45px;
+			margin: 0 15px;
+			box-shadow: 0 2px 3px rgba(0,0,0, .5);
+		}
+			.header__navbar--user-photo img {
+				border-radius: 32px;	
+			}
+
+.header__cartaz {
+	display: flex;
+	z-index: 2;
+}
+	.header__cartaz--title h2 {
+		font-size: 6.5em;
+		font-weight: bold;
+		color: white;
+		line-height: 1.2em;
+		margin: 0;
+		text-transform: uppercase;
+	}
+	.header__cartaz--genres {
+		display: flex;
+		margin: 15px 0 30px;
+	}
+		.header__cartaz--genres ul {
+			display: inherit;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+			.header__cartaz--genres ul li {
+					margin-right: 1.5em;
+			}
+				.header__cartaz--genres ul li a {
+						font-size: 1.3em;
+						color: white;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: all 0.2s ease-in-out;
+				}
+				.header__cartaz--genres ul li a:hover {
+						color:#e4bb23;
+				}
+		
+	.header__cartaz--trailer-btn {
+		display: inline-block;
+		padding: 15px 50px;
+		position: relative;
+		color: black;
+		font-size: 1.5em;
+		text-decoration: none;
+		background-color: #e4bb23;
+		border-radius: 40px;
+		transition: all 0.2s ease-in-out;
+	}
+	.header__cartaz--trailer-btn:hover {
+		background-color: #bc9a1d;
+	}
+		.header__cartaz--trailer-btn i {
+			font-size: 1.5em;
+			position: absolute;
+			right: 15px;
+			top: 12px;
+		}
+
+	.header__cartaz--information {
+		padding: 20px 0;
+		font-size: 1.4em;
+		color: white;
+	}
+
+.catalog {
+	width: 100%;
+	background-color: #F2F2F2;
+}
+	.catalog__navbar {
+		width: 100%;
+	}
+		.catalog__navbar--menu {
+			align-items: center;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		.catalog__navbar--menu li {
+			margin: 0 20px;
+		}
+
+		.catalog__navbar--menu li a {
+			color: #e4bb23;
+			display: inline-block;
+			padding: 25px 0;
+		}
+		.catalog__navbar--menu li a:hover {
+			box-shadow: inset 0 -1px 0 #e4bb23;
+		}
+
+	.catalog__movies {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 20px 0;
+		width: 100%;
+	}
+		.catalog__movies--movie {
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 30px;
+			overflow: hidden;
+			width: 24%;
+		}
+
+			.catalog__movies--movie > a {
+				color: #e4bb23;
+				display: inline-block;
+				padding: 25px 0;
+			}
+
+	.movie__poster {
+		margin: 0;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		position: relative;
+	}			
+		.movie__poster img {
+			width: 100%;
+			height: auto;
+		}
+		.movie__poster--info {
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+			left: 0;
+			opacity: 0;
+			padding: 80px 20px;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			transition: all 0.2s ease-in-out;
+			visibility: hidden;
+			width: 100%;
+			z-index: 1;
+		}
+		.catalog__movies--movie:hover .movie__poster--info {
+			opacity: 1;
+			visibility: visible;
+		}
+			.movie__poster--info h3 {
+				color: #e4bb23;
+				font-size: 2em;
+				line-height: 1em;
+				text-transform: uppercase;
+			}
+			.movie__poster--info a {
+				color: #fff;
+				font-size: 5em;
+				transition: all 0.2s ease-in-out;
+			}
+			.movie__poster--info a:hover {
+				color: #e4bb23;
+			}
+	.movie__synopsis {
+		padding: 10px;
+		width: 100%;
+	}
+		.movie__synopsis--title {
+			font-size: 1.3em;
+			font-weight: bold;
+			margin: 0;
+			text-transform: uppercase;
+		}
+		.movie__synopsis--genre {
+			display: flex;
+		}
+			.movie__synopsis--genre-item {
+				text-decoration: none;
+				font-size: 1.2em;
+				color: #e4bb23;
+			}
+			.movie__synopsis--genre-item:hover {
+				text-decoration: underline;
+			}
+		.movie__synopsis--rate {
+			margin: 0;
+			align-items: center;
+			display: flex;
+			font-size: 2em;
+			font-weight: bold;
+			justify-content: space-between;
+		}
+			.movie__synopsis--rate i {
+				color: #ccc;
+				cursor: pointer;
+			}
+			.movie__synopsis--rate i:hover {
+				color: #e74c3c;
+			}
+.footer {
+	background-color: #fff;
+	color: #bababa;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__social {
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.footer__social--item {
+	margin: 0 20px;
+}
+
+.footer__social--item:last-child {
+	margin-right: 0;
+}
+
+.footer__social--item a {
+	font-size: 2.5em;
+	color: #bababa;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.icon-twitter a:hover {
+	color: #55acee;
+}
+
+.icon-facebook a:hover {
+	color: #3b5998;
+}
+
+.icon-instagram a:hover {
+	color: #e95950;
+}
